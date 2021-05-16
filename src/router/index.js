@@ -1,6 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Header from "../components/Header.vue";
+import SignIn from "../views/SignInFlow/SignIn.vue";
+import Recover from "../views/SignInFlow/Recover.vue";
+import Request from "../views/SignInFlow/Request.vue";
 
 Vue.use(VueRouter);
 
@@ -18,6 +22,26 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: "/header",
+    name: "header",
+    component: Header,
+  },
+  {
+    path: "/signin",
+    name: "signin",
+    component: SignIn,
+  },
+  {
+    path: "/request",
+    name: "request",
+    component: Request,
+  },
+  {
+    path: "/recover",
+    name: "recover",
+    component: Recover,
   },
 ];
 
